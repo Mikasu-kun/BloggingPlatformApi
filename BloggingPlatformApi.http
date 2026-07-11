@@ -1,6 +1,43 @@
-@BloggingPlatformApi_HostAddress = http://localhost:5183
+@BloggingPlatformUri = http://localhost:5183
 
-GET {{BloggingPlatformApi_HostAddress}}/weatherforecast/
+GET {{BloggingPlatformUri}}/api/posts
+Accept: application/json
+
+
+###
+GET {{BloggingPlatformUri}}/api/posts?term=Tech
 Accept: application/json
 
 ###
+GET {{BloggingPlatformUri}}/api/posts/2
+Accept: application/json
+
+
+###
+POST {{BloggingPlatformUri}}/api/posts
+Content-Type: application/json
+{
+    "title": "My First Blog Post",
+    "content": "This is the content of my first blog post.",
+    "category": "Technology",
+    "tags": ["Tech", "Programming"]
+}
+
+###
+PUT {{BloggingPlatformUri}}/api/posts/2
+Content-Type: application/json
+{
+    "id": 2,
+    "title": "Updated Second Post",
+    "content": "This is the updated content of the second post.",
+    "tags": [
+      "Introduction",
+      "Welcome",
+      "Update"
+    ],
+    "createdAt": "2026-07-12T13:45:35.7726786Z",
+    "updatedAt": "2026-07-12T14:00:00.0000000Z"
+}
+
+###
+DELETE {{BloggingPlatformUri}}/api/posts/5
