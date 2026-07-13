@@ -1,5 +1,6 @@
 # BloggingPlatformApi
 Basic RESTful API for blogging platform. The API allows performing CRUD (Create, Read, Update, and Delete) operations on blog posts. Additionally, blog posts can be filtered by a search term. 
+Built as part of the [roadmap.sh](https://roadmap.sh/projects/blogging-platform-api) project.
 ### Stack:
 - ASP.NET Core 10
 - PostgreSQL
